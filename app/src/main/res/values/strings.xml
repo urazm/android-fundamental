@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidFundamentals</string>
+    <string name="age_limit">13+</string>
+    <string name="lable">Avengers:</string>
 </resources>
