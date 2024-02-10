@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">AndroidFundamentals</string>
     <string name="age_limit">13+</string>
-    <string name="lable">Avengers:</string>
+    <string name="film_name">Avengers: End Game</string>
+    <string name="genres">Action, Adventure, Fantasy</string>
+    <string name="review_count">125 REVIEWS</string>
+    <string name="storyline">Storyline</string>
+
+    <string name="description">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="cast_label">Cast</string>
 </resources>
