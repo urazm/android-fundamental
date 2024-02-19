@@ -9,7 +9,7 @@
         <item name="android:rating">4</item>
         <item name="android:stepSize">0.1</item>
         <item name="android:isIndicator">true</item>
-        <item name="android:scaleX">1.2</item> <!-- Уменьшение размера по оси X -->
-        <item name="android:scaleY">1.2</item> <!-- Уменьшение размера по оси Y -->
+        <item name="android:scaleX">1.2</item>
+        <item name="android:scaleY">1.2</item>
     </style>
 </resources>
