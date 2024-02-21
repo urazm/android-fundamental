@@ -27,6 +27,7 @@ class FragmentMoviesList : Fragment() {
             setOnClickListener{
                 activity.supportFragmentManager.beginTransaction()
                     .add(R.id.main_container, FragmentMoviesDetails())
+                    .addToBackStack("movie_details")
                     .commit()
             }
         }
