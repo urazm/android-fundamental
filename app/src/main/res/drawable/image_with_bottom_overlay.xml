@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Фоновое изображение -->
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/card_background" />
+    <!-- Затемнение снизу -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#00000000"
+                android:endColor="#BB000000"
+                android:angle="270"/>
+        </shape>
+    </item>
+</layer-list>
