@@ -1,6 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_card"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/movies_label"
+    app:layout_constraintStart_toEndOf="@id/content_start"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    app:cardBackgroundColor="@color/container_background_color"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="0dp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_with_bottom_overlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genres"
+            android:textColor="@color/genre_color"
+            app:layout_constraintStart_toStartOf="@id/header_image"
+            app:layout_constraintBottom_toTopOf="@id/ratingBar"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:fontFamily="sans-serif"
+            android:textSize="12sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/AppRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            app:layout_constraintBottom_toBottomOf="@id/reviews"
+            app:layout_constraintEnd_toStartOf="@id/reviews"
+            app:layout_constraintStart_toStartOf="@id/genre"
+            app:layout_constraintTop_toTopOf="@id/reviews"
+            android:rating="5"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <TextView
+            android:id="@+id/reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/review_count"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@id/genre"
+            app:layout_constraintBottom_toBottomOf="@id/header_image"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif"
+            tools:ignore="TextContrastCheck"
+            />
+
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="Avengers: End Game"
+            app:layout_constraintEnd_toEndOf="@id/header_image"
+            app:layout_constraintStart_toStartOf="@id/header_image"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toBottomOf="@id/header_image"
+            app:layout_constraintBottom_toTopOf="@id/subhead"
+            />
+
+        <TextView
+            android:id="@+id/subhead"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/gray_text_color"
+            android:text="137 MIN"
+            app:layout_constraintEnd_toEndOf="@id/header_image"
+            app:layout_constraintStart_toStartOf="@id/header_image"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
