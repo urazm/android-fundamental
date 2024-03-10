@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ru.fundamental.android.learn.data.models.Movie
 
-class FilmsAdapter: RecyclerView.Adapter<FilmsHolder>() {
+class MoviesAdapter: RecyclerView.Adapter<FilmsHolder>() {
 
         private var moviesList: List<Movie> = listOf()
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmsHolder {
