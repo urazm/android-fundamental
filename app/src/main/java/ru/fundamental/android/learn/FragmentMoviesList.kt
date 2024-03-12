@@ -6,11 +6,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
+import ru.fundamental.android.learn.data.models.Movie
+import ru.fundamental.android.learn.domain.MovieDataSource
 
 class FragmentMoviesList : Fragment() {
 
-    private var movieCardView: CardView? = null
+//    private var movieCardView: CardView? = null
+    private var recycler: RecyclerView? = null
 
+    override fun onStart() {
+        super.onStart()
+
+        updateData()
+    }
+
+    private fun updateData() {
+        (recycler?.adapter as? MoviesAdapter)?.apply {
+            bindActors(MovieDataSource().getActors())
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,14 +37,16 @@ class FragmentMoviesList : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val activity = requireActivity()
-        movieCardView = view.findViewById<CardView?>(R.id.movie_card).apply {
-            setOnClickListener{
-                activity.supportFragmentManager.beginTransaction()
-                    .add(R.id.main_container, FragmentMoviesDetails())
-                    .addToBackStack("movie_details")
-                    .commit()
-            }
-        }
+//        val activity = requireActivity()
+//        movieCardView = view.findViewById<CardView?>(R.id.movie_card).apply {
+//            setOnClickListener{
+//                activity.supportFragmentManager.beginTransaction()
+//                    .add(R.id.main_container, FragmentMoviesDetails())
+//                    .addToBackStack("movie_details")
+//                    .commit()
+//            }
+//        }
+        recycler = view.findViewById(R.id.rv_movies)
+        recycler?.adapter = MoviesAdapter()
     }
 }

@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ru.fundamental.android.learn.data.models.Movie
+import java.util.LinkedList
 
 class MoviesAdapter: RecyclerView.Adapter<FilmsHolder>() {
 
@@ -20,6 +21,10 @@ class MoviesAdapter: RecyclerView.Adapter<FilmsHolder>() {
 
         override fun onBindViewHolder(holder: FilmsHolder, position: Int) {
                 holder.onBind(moviesList[position])
+        }
+        fun bindActors(newMovie: LinkedList<Movie>) {
+                moviesList = newMovie
+                notifyDataSetChanged()
         }
 
 }

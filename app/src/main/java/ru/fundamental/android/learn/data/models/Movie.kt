@@ -5,5 +5,6 @@ data class Movie(
     val title: String,
     val genre: String,
     val reviews: Int,
-    val subhead: String
+    val subhead: String,
+    val rating: Int,
 )
