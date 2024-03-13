@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ru.fundamental.android.learn.data.models.Movie
@@ -36,6 +37,7 @@ class FilmsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val reviews: TextView = itemView.findViewById(R.id.reviews)
         private val title: TextView = itemView.findViewById(R.id.title)
         private val subhead: TextView = itemView.findViewById(R.id.subhead)
+        private val rating: RatingBar = itemView.findViewById(R.id.ratingBar)
 
         fun onBind(movie: Movie) {
                 itemView.apply {
@@ -44,6 +46,7 @@ class FilmsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
                         reviews.text = resources.getString(R.string.review_count)
                         subhead.text = movie.subhead
                         image.setImageResource(movie.image)
+                        rating.rating = movie.rating.toFloat()
                 }
         }
 }

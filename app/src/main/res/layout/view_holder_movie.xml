@@ -43,7 +43,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
-            android:rating="5"
             tools:ignore="SpeakableTextPresentCheck"/>
 
         <TextView

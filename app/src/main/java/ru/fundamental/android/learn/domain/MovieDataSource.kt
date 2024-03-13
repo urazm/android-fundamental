@@ -14,7 +14,7 @@ class MovieDataSource {
                     genre = "Action, Adventure, Drama",
                     reviews = 250,
                     subhead = "3h 2min",
-                    rating = 5
+                    rating = 5.0
                 ),
                 Movie(
                     image = R.drawable.image_with_bottom_overlay,
@@ -22,7 +22,7 @@ class MovieDataSource {
                     genre = "Crime, Drama, Thriller",
                     reviews = 300,
                     subhead = "2h 2min",
-                    rating = 4
+                    rating = 4.0
                 ),
                 Movie(
                     image = R.drawable.image_with_bottom_overlay,
@@ -30,7 +30,7 @@ class MovieDataSource {
                     genre = "Action, Adventure, Sci-Fi",
                     reviews = 200,
                     subhead = "2h 28min",
-                    rating = 3
+                    rating = 3.0
                 ),
             )
         )
