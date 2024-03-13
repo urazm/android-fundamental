@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.fundamental.android.learn.data.models.Movie
 import ru.fundamental.android.learn.domain.MovieDataSource
@@ -37,7 +38,7 @@ class FragmentMoviesList : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        val activity = requireActivity()
+        val activity = requireActivity()
 //        movieCardView = view.findViewById<CardView?>(R.id.movie_card).apply {
 //            setOnClickListener{
 //                activity.supportFragmentManager.beginTransaction()
@@ -48,5 +49,7 @@ class FragmentMoviesList : Fragment() {
 //        }
         recycler = view.findViewById(R.id.rv_movies)
         recycler?.adapter = MoviesAdapter()
+        recycler?.layoutManager = GridLayoutManager(activity, 2)
+
     }
 }
