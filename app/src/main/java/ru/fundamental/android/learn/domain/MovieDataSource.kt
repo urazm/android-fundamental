@@ -9,7 +9,7 @@ class MovieDataSource {
         return LinkedList(
             listOf(
                 Movie(
-                    image = R.drawable.image_with_bottom_overlay,
+                    image = R.drawable.card_background,
                     title = "Avengers: Endgame",
                     genre = "Action, Adventure, Drama",
                     reviews = 250,
@@ -17,7 +17,7 @@ class MovieDataSource {
                     rating = 5.0
                 ),
                 Movie(
-                    image = R.drawable.image_with_bottom_overlay,
+                    image = R.drawable.movie2,
                     title = "Joker",
                     genre = "Crime, Drama, Thriller",
                     reviews = 300,
@@ -25,9 +25,17 @@ class MovieDataSource {
                     rating = 4.0
                 ),
                 Movie(
-                    image = R.drawable.image_with_bottom_overlay,
+                    image = R.drawable.movie1,
                     title = "Inception",
                     genre = "Action, Adventure, Sci-Fi",
+                    reviews = 200,
+                    subhead = "2h 28min",
+                    rating = 3.0
+                ),
+                Movie(
+                    image = R.drawable.movie3,
+                    title = "Добрыня никитич",
+                    genre = "Жесткий дрифт",
                     reviews = 200,
                     subhead = "2h 28min",
                     rating = 3.0

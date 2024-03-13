@@ -10,19 +10,24 @@
     app:cardBackgroundColor="@color/container_background_color"
     app:cardElevation="6dp"
     app:cardCornerRadius="8dp"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true"
+    >
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/header_image"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
             android:scaleType="centerCrop"
-            tools:src="@drawable/bg_image"
+            android:src="@drawable/card_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:foreground="@drawable/image_with_bottom_overlay"
             />
 
         <TextView
@@ -33,8 +38,10 @@
             android:textColor="@color/genre_color"
             android:fontFamily="sans-serif"
             android:textSize="12sp"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/ratingBar"
+            app:layout_constraintStart_toStartOf="@id/header_image"
+
             />
 
         <RatingBar
@@ -42,8 +49,12 @@
             style="@style/AppRatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="19dp"
-            tools:ignore="SpeakableTextPresentCheck"/>
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@id/header_image"
+            app:layout_constraintBottom_toBottomOf="@id/header_image"
+            app:layout_constraintEnd_toStartOf="@id/reviews"
+            tools:rating="5"
+            />
 
         <TextView
             android:id="@+id/reviews"
@@ -52,36 +63,43 @@
             android:text="@string/review_count"
             android:layout_marginStart="12dp"
             android:textColor="@color/gray"
-            android:textSize="13sp"
+            android:textSize="10sp"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
-            tools:ignore="TextContrastCheck"
+            app:layout_constraintBottom_toBottomOf="@id/header_image"
+            app:layout_constraintStart_toEndOf="@id/ratingBar"
             />
 
 
         <TextView
             android:id="@+id/title"
             style="@style/TextAppearance.MaterialComponents.Headline3"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
             android:textSize="20sp"
             android:textColor="@color/white"
             android:text="Avengers: End Game"
+
+            app:layout_constraintTop_toBottomOf="@id/header_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
             android:id="@+id/subhead"
-            style="@style/TextAppearance.MaterialComponents.Subtitle2"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="8dp"
+            android:paddingBottom="8dp"
             android:textStyle="bold"
+            android:textSize="10dp"
             android:textColor="@color/gray_text_color"
             android:text="137 MIN"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
