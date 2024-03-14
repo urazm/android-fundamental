@@ -14,7 +14,8 @@ class MovieDataSource {
                     genre = "Action, Adventure, Drama",
                     reviews = 250,
                     subhead = "3h 2min",
-                    rating = 5.0
+                    rating = 5.0,
+                    ageLimit = "13+"
                 ),
                 Movie(
                     image = R.drawable.movie2,
@@ -22,7 +23,8 @@ class MovieDataSource {
                     genre = "Crime, Drama, Thriller",
                     reviews = 300,
                     subhead = "2h 2min",
-                    rating = 4.0
+                    rating = 4.0,
+                    ageLimit = "18+"
                 ),
                 Movie(
                     image = R.drawable.movie1,
@@ -30,15 +32,17 @@ class MovieDataSource {
                     genre = "Action, Adventure, Sci-Fi",
                     reviews = 200,
                     subhead = "2h 28min",
-                    rating = 3.0
+                    rating = 3.0,
+                    ageLimit = "12+"
                 ),
                 Movie(
                     image = R.drawable.movie3,
-                    title = "Добрыня никитич",
-                    genre = "Жесткий дрифт",
-                    reviews = 200,
+                    title = "Добрыня Никитич",
+                    genre = "Cartoon",
+                    reviews = 500,
                     subhead = "2h 28min",
-                    rating = 3.0
+                    rating = 3.0,
+                    ageLimit = "99+"
                 ),
             )
         )

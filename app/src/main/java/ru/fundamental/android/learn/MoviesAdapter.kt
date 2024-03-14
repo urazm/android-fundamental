@@ -38,15 +38,18 @@ class FilmsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val title: TextView = itemView.findViewById(R.id.title)
         private val subhead: TextView = itemView.findViewById(R.id.subhead)
         private val rating: RatingBar = itemView.findViewById(R.id.ratingBar)
+        private val ageLimit: TextView = itemView.findViewById(R.id.age_limit_text)
+
 
         fun onBind(movie: Movie) {
                 itemView.apply {
                         title.text = movie.title
                         genre.text = movie.genre
-                        reviews.text = resources.getString(R.string.review_count)
+                        reviews.text = context.getString(R.string.reviews, movie.reviews.toString())
                         subhead.text = movie.subhead
                         image.setImageResource(movie.image)
                         rating.rating = movie.rating.toFloat()
+                        ageLimit.text = movie.ageLimit
                 }
         }
 }
