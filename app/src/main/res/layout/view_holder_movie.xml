@@ -39,7 +39,7 @@
             app:layout_constraintStart_toStartOf="@id/header_image"
             android:layout_margin="8dp"
             />
-        <TextView
+            <TextView
             android:id="@+id/age_limit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,6 +50,7 @@
             app:layout_constraintEnd_toEndOf="@id/age_limit_back"
             app:layout_constraintBottom_toBottomOf="@id/age_limit_back"
             app:layout_constraintTop_toTopOf="@id/age_limit_back"
+            tools:text="13+"
              />
         <ImageView
             android:id="@+id/like"

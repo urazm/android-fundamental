@@ -24,7 +24,7 @@ class FragmentMoviesList : Fragment() {
 
     private fun updateData() {
         (recycler?.adapter as? MoviesAdapter)?.apply {
-            bindActors(MovieDataSource().getActors())
+            bindActors(MovieDataSource().getMovies())
         }
     }
 
