@@ -4,32 +4,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
 import ru.fundamental.android.learn.data.models.Actor
 import java.util.LinkedList
 
 class ActorsAdapter: RecyclerView.Adapter<ActorHolder>() {
 
-    private var ActorsList: List<Actor> = listOf()
+    private var actorList: List<Actor> = listOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_actor, parent, false)
         return ActorHolder(view)
     }
 
-    override fun getItemCount(): Int = ActorsList.size
+    override fun getItemCount(): Int = actorList.size
 
     override fun onBindViewHolder(holder: ActorHolder, position: Int) {
-        holder.onBind(ActorsList[position])
+        holder.onBind(actorList[position])
     }
 
     fun bindActors(newActor: LinkedList<Actor>) {
-        ActorsList = newActor
+        actorList = newActor
         notifyDataSetChanged()
     }
 
